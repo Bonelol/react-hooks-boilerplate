@@ -1,0 +1,5 @@
+import { {{ properCase name }} } from "@store/types/{{ camelCase name }}";
+
+export type {{ camelCase name }}Actions = { type: '{{ constantCase name }}_FETCH' }
+| { type: '{{ constantCase name }}_INIT'; payload: {{ properCase name }}[] }
+| { type: '{{ constantCase name }}_ADD'; payload: {{ properCase name }} };

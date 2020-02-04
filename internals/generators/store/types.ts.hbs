@@ -1,0 +1,13 @@
+export type Reducer = (state: State, action: Action) => State;
+
+export interface {{ properCase name }} {
+  name: string;
+  id: number;
+}
+
+export type State = {{ properCase name }}[];
+
+export type Action =
+  | { type: '{{ constantCase name }}_INIT'; payload: {{ properCase name }}[] }
+  | { type: '{{ constantCase name }}_FETCH'; payload: {{ properCase name }}[] }
+  | { type: '{{ constantCase name }}_ADD'; payload: {{ properCase name }} };

@@ -1,0 +1,19 @@
+import { Action, State, {{ properCase name }} } from './types';
+
+const reducer = (state: State, action: Action) => {
+  state = state || [];
+
+  switch (action.type) {
+    case '{{ constantCase name }}_FETCH':
+      return state;
+    case '{{ constantCase name }}_INIT':
+      return [...(action.payload as {{ properCase name }}[])];
+    case '{{ constantCase name }}_ADD': {
+      return state;
+    }
+    default:
+      return state;
+  }
+};
+
+export default reducer;

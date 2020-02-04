@@ -1,0 +1,16 @@
+.debug {
+    width: 960px;
+}
+
+.debug > div > div {
+    display: flex;
+}
+
+.debug textarea {
+    width: 50%;
+    height: 640px;
+}
+
+.debug textarea + textarea {
+    margin-left: 8px;
+}

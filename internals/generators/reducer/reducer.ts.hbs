@@ -1,0 +1,41 @@
+/**
+ *
+ * {{ properCase name }}Reducer
+ *
+ */
+import { setIn } from 'immutable';
+import { Action, Reducer } from '@store/types';
+
+export const canHandle{{ properCase name }}: (action: Action) => boolean = action => {
+  switch (action.type) {
+    case '{{ constantCase name }}_FETCH':
+      return true;
+    case '{{ constantCase name }}_INIT':
+      return true;
+    case '{{ constantCase name }}_ADD':
+      return true;
+    default:
+      return false;
+  }
+};
+
+export const {{ camelCase name }}Reducer: Reducer = (state, action) => {
+  state = state || [];
+
+  switch (action.type) {
+    case '{{ constantCase name }}_FETCH':
+      return state;
+    case '{{ constantCase name }}_INIT':
+      return setIn(state, ['{{ camelCase name }}'], [...action.payload]);
+    case '{{ constantCase name }}_ADD': {
+      const { payload } = action;
+      return setIn(
+        state,
+        ['{{ camelCase name }}'],
+        state.{{ camelCase name }}Store.map({{ camelCase name }} => ({{ camelCase name }}.id === payload.id ? { ...{{ camelCase name }} } : {{ camelCase name }}))
+      );
+    }
+    default:
+      return state;
+  }
+};

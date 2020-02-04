@@ -1,0 +1,27 @@
+/**
+ *
+ * {{ properCase name }}
+ *
+ */
+
+{{#if memo}}
+import React, { memo } from 'react';
+{{else}}
+import React from 'react';
+{{/if}}
+
+import { Props } from 'src/types';
+import './index.scss';
+
+const {{ properCase name }} = (props: Props) => {
+  return (
+    <div>
+    </div>
+  );
+}
+
+{{#if memo}}
+export default memo({{ properCase name }});
+{{else}}
+export default {{ properCase name }};
+{{/if}}
