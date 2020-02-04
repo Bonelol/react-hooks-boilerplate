@@ -1,6 +1,6 @@
 # React-Hooks-Boilerplate
 
-A boilerplate using React Hooks for state management，  
+A boilerplate using React Hooks for managing application state.  
 Using TypeScript，Jest、Enzyme
 
 ## Before Start

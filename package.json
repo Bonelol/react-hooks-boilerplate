@@ -1,7 +1,7 @@
 {
   "name": "react-hooks-boilerplate",
   "version": "1.0.0",
-  "description": "A boilerplate using React Hooks for state management.",
+  "description": "A boilerplate using React Hooks for managing application state.",
   "private": true,
   "scripts": {
     "start-server": "json-server --watch ./__mocks__/db.json --port 3001",
